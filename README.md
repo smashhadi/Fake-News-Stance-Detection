@@ -8,9 +8,9 @@ Stance detection can be the first step in detecting fake news. Stance detection 
 
 ## Formal Definition:
 (from fakenewschallenge.org)
-##### Input
+### Input
 A headline and a body text - either from the same news article or from two different articles.
-##### Output
+### Output
 Classify the stance of the body text relative to the claim made in the headline into one of four categories:
 Agrees: The body text agrees with the headline.
 Disagrees: The body text disagrees with the headline.
@@ -33,4 +33,4 @@ Unrelated: The body text discusses a different topic than the headline
 7. Optimizers
 8. Dropout
  
-Accuracy after each epoch can be seen in the file training_output.
+Overview of the model and other details are laid out in the poster "final_poster.pdf". Accuracy after each epoch can be seen in the file training_output.
