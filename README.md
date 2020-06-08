@@ -33,4 +33,4 @@ Unrelated: The body text discusses a different topic than the headline
 7. Optimizers
 8. Dropout
  
-Overview of the model and other details are laid out in the poster "final_poster.pdf". Accuracy after each epoch can be seen in the file training_output.
+Overview of the model and other details are laid out in the poster "final_poster.pdf". Training and Validation accuracy after each epoch can be seen in the file training_output.
