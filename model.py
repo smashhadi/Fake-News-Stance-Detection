@@ -4,7 +4,7 @@ Python implementation in Google Colab
 Reads batch processed training data from saved location
 Tests trained model on validation dataset
 Test output was not available to competition participants. Choosing a model based on performance on Validation data.
-""
+"""
 
 import numpy as np
 from keras.layers import Input, Dense, LSTM, Embedding, Dropout, BatchNormalization, Activation, Bidirectional, LSTM, TimeDistributed, concatenate
@@ -14,6 +14,7 @@ from keras.optimizers import Adam,SGD
 from keras.callbacks import LearningRateScheduler
 import math
 from keras import callbacks
+from batch_processing import BatchGenerator, TestBatchGenerator, DataShuffle
 
 MAX_VOCAB_SIZE = 20000
 BATCH_SIZE = 10
@@ -30,9 +31,8 @@ MAX_HEADLINE_SENTENCES = 1
 b_train = BatchGenerator(BATCH_SIZE,"train")
 b_validation = BatchGenerator(BATCH_SIZE,"validation")
 b_test = TestBatchGenerator(1)
-# dataset = StanceDetectionDataset('train', classes)
+
 embedding_matrix = np.load('/content/../Data/colab/embeddings_matrix.npy')
-# bodies = dataset.tokenized_body_train
 
 embedding_layer = Embedding(embedding_matrix.shape[0],
                             EMBEDDING_DIM,
